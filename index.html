@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Numans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <main class="card">
@@ -17,12 +17,12 @@
 
         <form>
             <input type="text" id="input-item" name="item" placeholder="Digite o item que deseja adicionar" class="campo">
-            <button type="button" onclick="adicionar()" id="adicionar-botao">
+            <button type="button" onclick="adicionar()" id="adicionar-item">
                 Salvar item
             </button>
         </form>
         
-        <ul>
+        <ul id="lista-de-compras">
             <h2 class="titulo">Lista de Compras</h2>
             <hr class="linha">
             <li>
@@ -49,7 +49,7 @@
             </li>
         </ul>
     </main>
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>
