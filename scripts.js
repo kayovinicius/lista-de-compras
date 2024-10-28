@@ -11,14 +11,16 @@ function adicionarItem(evento) {
     const containerItemLista = document.createElement("div");
     containerItemLista.classList.add("item-lista-container");
 
-    const conatainerNomeDoItem = document.createElement("div");
+    const containerNomeDoItem = document.createElement("div");
     const nomeDoItem = document.createElement("p");
     nomeDoItem.innerText = item.value;
-    conatainerNomeDoItem.appendChild(nomeDoItem);
+    containerNomeDoItem.appendChild(nomeDoItem);
 
     const containerBotoes = document.createElement("div");
-    const botaoRemover = document.createElement("button")
+    const botaoRemover = document.createElement("button");
+    const botaoEditar = document.createElement("button");
     botaoRemover.classList.add("botao-acao");
+    botaoEditar.classList.add("botao-acao");
 
     const imagemRemover = document.createElement("img");
     imagemRemover.src = "img/delete.svg";
@@ -27,9 +29,14 @@ function adicionarItem(evento) {
     botaoRemover.appendChild(imagemRemover);
     containerBotoes.appendChild(botaoRemover);
 
-    //fazer o botão editar
+    const imagemEditar = document.createElement("img");
+    imagemEditar.src = "img/edit.svg";
+    imagemEditar.alt = "Editar";
 
-    containerItemLista.appendChild(conatainerNomeDoItem);
+    botaoEditar.appendChild(imagemEditar);
+    containerBotoes.appendChild(botaoEditar);
+
+    containerItemLista.appendChild(containerNomeDoItem);
     containerItemLista.appendChild(containerBotoes);
     itemDaLista.appendChild(containerItemLista);
     listaDeCompras.appendChild(itemDaLista);
