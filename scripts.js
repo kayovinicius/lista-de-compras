@@ -29,7 +29,7 @@ function adicionarItem(evento) {
     const checkboxLabel = document.createElement("label");
     checkboxLabel.setAttribute("for", checkboxInput.id);
 
-    checkboxLabel.addEventListener("click", function (evento) {
+    checkboxLabel.addEventListener("click", function (evento) { 
         const checkboxInput = evento.currentTarget.querySelector(".checkbox-input");
         const checkboxCustomizado = evento.currentTarget.querySelector(".checkbox-customizado");
         const itemTitulo = evento.currentTarget.closest("li").querySelector("#item-titulo")
@@ -92,7 +92,15 @@ function adicionarItem(evento) {
 
     containerItemLista.appendChild(containerNomeDoItem);
     containerItemLista.appendChild(containerBotoes);
+
+    const itemData = document.createElement("p")
+    itemData.innerText = `${new Date().toLocaleDateString("pt-BR", {weekday: "long"})} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute: "numeric"})}`;
+
+    itemData.classList.add("item-lista-texto");
+
+
     itemDaLista.appendChild(containerItemLista);
+    itemDaLista.appendChild(itemData);
     listaDeCompras.appendChild(itemDaLista);
 
 }
