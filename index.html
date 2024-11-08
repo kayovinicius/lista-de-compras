@@ -22,38 +22,21 @@
             </button>
         </form>
         <div class="container-lista">
+
             <ul id="lista-de-compras">
                 <h2 class="titulo">Lista de Compras</h2>
                 <hr class="linha">
-                <li>
-                    <div class="item-lista-container">
-                        <div class="container-nome-compra">
-                            <div class="checkbox-container">
-                                <label for="checkbox">
-                                    <input type="checkbox" class="checkbox-input" id="checkbox">
-                                    <div class="checkbox-customizado checked"></div>
-                                </label>
-                            </div>
-                            <p>Pão Doce</p>
-                        </div>
-                        <div>
-                            <button class="botao-acao">
-                                <img src="img/delete.svg" alt="Deletar">
-                            </button>
-                            <button class="botao-acao">
-                                <img src="img/edit.svg" alt="Editar">
-                            </button>
-                        </div>
-                    </div>
-                    <p class="item-lista-texto">Sexta-feira (04/10/2024) às 18:02</p>
-                </li>
+
+                <p id="mensagem-lista-vazia" style="display: block;">Sua lista está vazia. Adicione itens a ela para não esquecer nada na próxima compra!</p>
             </ul>
+
+
             <h2>Comprado</h2>
             <hr>
             <ul id="lista-comprados"></ul>
         </div>
     </main>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" type="module"></script>
 </body>
 
 </html>
