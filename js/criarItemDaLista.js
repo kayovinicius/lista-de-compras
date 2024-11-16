@@ -1,3 +1,6 @@
+import { excluirItem } from "./excluirItem.js";
+
+const listaDeCompras = document.getElementById("lista-de-compras");
 const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 
@@ -71,6 +74,10 @@ export function criarItemDaLIsta(item) {
     const imagemRemover = document.createElement("img");
     imagemRemover.src = "img/delete.svg";
     imagemRemover.alt = "Remover";
+
+    botaoRemover.addEventListener("click", function () {
+        excluirItem(itemDaLista);
+    })
 
     botaoRemover.appendChild(imagemRemover);
     containerBotoes.appendChild(botaoRemover);
